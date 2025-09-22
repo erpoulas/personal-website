@@ -60,17 +60,19 @@
           h1 
           {
             font-family: 'Seriously Nostalgic Italic', sans-serif; /* Default font */
-            font-size:5vw;
+            /* font-size:5vw; */
             color: #001ecb;
             margin-left: 1.5vw;
             margin-right: 1.5vw;
             letter-spacing: 0.025em; 
+            font-size: clamp(50px, 5vw, 60px);
           }
 
           p 
           {
             font-family: 'Seriously Nostalgic', sans-serif; /* Default font */
-            font-size:4vw;
+            /* font-size:4vw; */
+            font-size: clamp(40px, 4vw, 50px);
             letter-spacing: 0.025em; 
             color: #001ecb; 
             margin-left: 1.5vw;
@@ -88,7 +90,7 @@
 
           .navbar
           {
-            font-size: 2vw;
+            font-size: clamp(30px, 2vw, 50px);
             color: #001ecb;
             background-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Background image URL */
             background-size: cover; /* Ensure the image covers the entire navbar */
@@ -151,7 +153,8 @@
         }
 
         .profile-pic {
-          width: 20vw;
+          /* width: 20vw; */
+          width: clamp(180px, 20vw, 250px);
           aspect-ratio: 1 / 1;
           border-radius: 50%;
           overflow: hidden;
@@ -187,11 +190,11 @@
             </div>
         </div>
       </nav>
-        <h1 style="text-align:center;">hello, I'm Erasmia!</h1>
+        <h1 class="text-center text-break" style="text-align:center;">hello, I'm Erasmia!</h1>
         <div class="profile-pic mx-auto my-4">
           <img src="assets/me.jpg">
         </div>
-        <p style="text-align:center;">
+        <p class="text-center text-break" style="text-align:center ;">
           I am a computer science student at CU Boulder with a passion for creative technology and design.  
           Currently, I am exploring my interests in VR, quantum programming, and data science.
         </p>
