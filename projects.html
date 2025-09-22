@@ -76,11 +76,11 @@
       }
 
       .card .btn {
-        background-color: #001ecb;   /* your brand blue */
+        background-color: #001ecb;
         border: none;
         font-family: 'Seriously Nostalgic Italic', sans-serif;
         letter-spacing: 0.05em;
-        border-radius: 2rem;         /* pill shape */
+        border-radius: 2rem;
         padding: 0.5rem 1.5rem;
         transition: transform 0.2s, background-color 0.2s;
       }
@@ -89,23 +89,17 @@
         background-color: darkblue;
         transform: scale(1.05);      /* subtle grow */
       }
-/* 
-      .card-title {
-        font-family: 'Lunchtype Light', serif;
-        color: #001ecb;
-        font-weight: bold;
-      } */
 
       .card-title {
         font-family: 'Lunchtype Light', serif;
         color: #001ecb;
         font-weight: bold;
-        display: block;              /* make sure it behaves like a block */
-        width: 100%;                 /* span full card width */
+        display: block;
+        width: 100%;
         background-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
-        padding: 0.5rem 1rem;         /* spacing around text */
-        margin: 0;                    /* remove default margins */
-        border-radius: 0.5rem 0.5rem 0 0; /* optional: round top corners only */
+        padding: 0.5rem 1rem;
+        margin: 0;
+        border-radius: 0.5rem 0.5rem 0 0; 
       }
 
 
@@ -150,13 +144,6 @@
 
         <!-- ===== Project Grid ===== -->
     <main class="projects-section container">
-      <!-- Optional: simple categories (toggle badges to filter later if you want) -->
-      <!-- <div class="mb-3 d-flex gap-2 flex-wrap">
-        <span class="badge px-3 py-2">p5.js</span>
-        <span class="badge px-3 py-2">web apps</span>
-        <span class="badge px-3 py-2">posters</span>
-        <span class="badge px-3 py-2">class projects</span>
-      </div> -->
 
       <!-- Cards grid -->
       <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
@@ -164,11 +151,9 @@
         <!-- p5.js Loading Screens -->
         <div class="col">
           <div class="card h-100">
-            <!-- <img class="thumb" src="assets/interface.png"> -->
-            <!-- <img class="thumb" src="url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3')"> -->
             <div class="card-body">
               <h5 class="card-title">Experimenting in p5.js</h5>
-              <p class="card-text">A set of playful loading animations exploring timing, easing, and visual rhythm.</p>
+              <p class="card-text">A set of playful animations exploring timing, easing, and visual rhythm.</p>
               <div class="d-flex gap-2 small project-meta">
                 <span>p5.js</span> · <span>interaction</span>
               </div>
@@ -182,7 +167,6 @@
         <!-- Task Management Web App -->
         <div class="col">
           <div class="card h-100">
-            <!-- <img class="thumb" src="assets/roommate_app/household_page.png"> -->
             <div class="card-body">
               <h5 class="card-title">Task Management Web App</h5>
               <p class="card-text">Full-stack app with auth, tasks, and simple analytics. Built with Bootstrap, Handlebars, SQL, Docker.</p>
@@ -199,7 +183,6 @@
         <!-- Waterbottle Pitch Poster -->
         <div class="col">
           <div class="card h-100">
-            <!-- <img class="thumb" src="assets/waterbottle_pitch.png" alt="Waterbottle poster thumbnail (placeholder)"> -->
             <div class="card-body">
               <h5 class="card-title">Waterbottle Pitch Poster</h5>
               <p class="card-text">A concept poster exploring brand voice, consumer interest, and sensory experience.</p>
@@ -242,7 +225,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title">p5.js loading screens</h5>
+            <h5 class="modal-title">p5.js projects</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body text-center">
@@ -255,7 +238,7 @@
             </div>
 
             <p class="text-start">
-                A series of animated loading screens built in <strong>p5.js</strong>.  
+                A series of animations built in <strong>p5.js</strong>.  
                 Each explores timing, easing, and playful visual rhythm.  
                 Designed as micro-interactions for web apps.
             </p>
@@ -263,8 +246,6 @@
         </div>
     </div>
     </div>
-
-
 
     <!-- Task app modal: image carousel of screens -->
     <div class="modal fade" id="modalTaskApp" tabindex="-1" aria-hidden="true">
@@ -419,3 +400,4 @@
     </div>
   </body>
 </html>
+
