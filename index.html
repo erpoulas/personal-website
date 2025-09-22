@@ -8,9 +8,11 @@
       <title>Erasmia Poulassichidis</title>
 
       <style>
+          :root { --footer-height: 80px; }
+
           main {
-          padding-bottom: 80 px; /* match or exceed footer height */
-        }
+            padding-bottom: calc(var(--footer-height) * 2); 
+          }
 
           @font-face{
             font-family:Seriously Nostalgic;
@@ -33,10 +35,8 @@
             border-color: white;
           }
 
-
-
           html, body{
-            height: 100%;
+            /* height: 100%; */
             margin: 0;
           }
 
@@ -195,6 +195,16 @@
         }
 
         </style>
+        <script>
+          function setFooterVar() {
+            const f = document.getElementById('footer');
+            if (!f) return;
+            const h = f.getBoundingClientRect().height;
+            document.documentElement.style.setProperty('--footer-height', h + 'px');
+          }
+          window.addEventListener('load', setFooterVar);
+          window.addEventListener('resize', setFooterVar);
+        </script>
 
     </head>
 
