@@ -10,8 +10,10 @@
     </title>
 
     <style>
+      :root { --footer-height: 80px; }
+      
       main {
-          padding-bottom: 200 px; /* match or exceed footer height */
+          padding-bottom:  calc(var(--footer-height) * 2); /* match or exceed footer height */
       }
       @font-face{
         font-family:Seriously Nostalgic;
@@ -26,7 +28,10 @@
         src:url('https://static.showit.co/file/_-NUGub4Sr2rpns-MaDx8Q/146247/seriouslynostalgicfnit-ucn.woff');
       }
 
-      html, body { height: 100%; margin: 0; }
+      html, body { 
+        /* height: 100%;  */
+        margin: 0; 
+      }
       body {
         display: flex;
         flex-direction: column;
@@ -99,7 +104,6 @@
         font-weight: bold;
         display: block;
         width: 100%;
-        background-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
         padding: 0.5rem 1rem;
         margin: 0;
         border-radius: 0.5rem 0.5rem 0 0; 
@@ -131,6 +135,18 @@
         background-repeat: no-repeat;       
       }
     </style>
+    
+    <script>
+      // Set the CSS var to the *actual* footer height (works with responsive text)
+      function setFooterVar() {
+        const f = document.getElementById('footer');
+        if (!f) return;
+        const h = f.getBoundingClientRect().height;
+        document.documentElement.style.setProperty('--footer-height', h + 'px');
+      }
+      window.addEventListener('load', setFooterVar);
+      window.addEventListener('resize', setFooterVar);
+    </script>
   </head>
 
   <body class="h-100 d-flex flex-column">
@@ -158,6 +174,7 @@
     <!-- <main class="projects-section container"> -->
 
       <!-- Cards grid -->
+    <div class="container my-4">
       <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
 
         <!-- p5.js Loading Screens -->
@@ -224,10 +241,10 @@
             </div>
           </div>
         </div>
-
         <!-- Add more projects here as you go… -->
-
       </div>
+    </div>
+    </main>
 
     <!-- ===== Modals ===== -->
 
@@ -394,7 +411,6 @@
         </div>
       </div>
     </div>
-    </main>
 
     <!-- Footer -->
     <footer id="footer" class="card footer">
@@ -415,8 +431,3 @@
       </footer>
   </body>
 </html>
-
-
-
-
-
