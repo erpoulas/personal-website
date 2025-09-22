@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.3/font/bootstrap-icons.min.css">
+    <title>Projects by Erasmia
+
+    </title>
+
+    <style>
+      @font-face{
+        font-family:Seriously Nostalgic;
+        src:url('https://static.showit.co/file/i3a2i1-7QZOw4SFsF9MUDQ/146247/seriouslynostalgic-extracond.woff');
+      }
+      @font-face{
+        font-family:Lunchtype Light;
+        src:url('https://static.showit.co/file/wPWMQl-gT--DMXo93qNi0Q/146247/lunchtype22-light-webfont.woff');
+      }
+      @font-face{
+        font-family:Seriously Nostalgic Italic;
+        src:url('https://static.showit.co/file/_-NUGub4Sr2rpns-MaDx8Q/146247/seriouslynostalgicfnit-ucn.woff');
+      }
+
+      html, body { height: 100%; margin: 0; }
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background-color: #f4f1ea;
+      }
+
+      h1 {
+        font-family: 'Seriously Nostalgic Italic', sans-serif;
+        font-size: 5vw;
+        text-align: center;
+        color: #001ecb;
+        margin-top: 2rem;
+      }
+
+      p {
+        font-family: 'Lunchtype Light', serif;
+        font-size: 1.2rem;
+        text-align: center;
+        color: #001ecb;
+      }
+
+      .navbar {
+        font-size: 2vw;
+        color: #001ecb;
+        background-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .navbar-nav .nav-link {
+        font-family: 'Seriously Nostalgic', sans-serif;
+        color: #001ecb;
+      }
+      .navbar-nav .nav-link:hover {
+        font-family: 'Seriously Nostalgic Italic', sans-serif;
+        color: darkblue;
+      }
+      .navbar-toggler-icon { filter: invert(100%); }
+      .navbar-toggler { border-color: white; }
+
+      .projects-section {
+        padding: 2rem;
+      }
+      .card {
+        border: none;
+        border-radius: 1rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
+      }
+
+      .card .btn {
+        background-color: #001ecb;   /* your brand blue */
+        border: none;
+        font-family: 'Seriously Nostalgic Italic', sans-serif;
+        letter-spacing: 0.05em;
+        border-radius: 2rem;         /* pill shape */
+        padding: 0.5rem 1.5rem;
+        transition: transform 0.2s, background-color 0.2s;
+      }
+
+      .card .btn:hover {
+        background-color: darkblue;
+        transform: scale(1.05);      /* subtle grow */
+      }
+/* 
+      .card-title {
+        font-family: 'Lunchtype Light', serif;
+        color: #001ecb;
+        font-weight: bold;
+      } */
+
+      .card-title {
+        font-family: 'Lunchtype Light', serif;
+        color: #001ecb;
+        font-weight: bold;
+        display: block;              /* make sure it behaves like a block */
+        width: 100%;                 /* span full card width */
+        background-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
+        padding: 0.5rem 1rem;         /* spacing around text */
+        margin: 0;                    /* remove default margins */
+        border-radius: 0.5rem 0.5rem 0 0; /* optional: round top corners only */
+      }
+
+
+      .card-text {
+        font-family: 'Lunchtype Light', serif;
+      }
+
+      #footer {
+        font-family: 'Lunchtype Light', serif;
+        font-size: 1.5vw;
+        color: #001ecb;
+        letter-spacing: 0.025em; 
+        text-align: center;
+        margin-top: auto;  
+        background-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3');
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat; 
+      }
+    </style>
+  </head>
+
+  <body class="h-100 d-flex flex-column">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 d-flex justify-content-evenly">
+            <li class="nav-item"><a class="nav-link" href="home.html">home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <h1>my projects</h1>
+    <p>A showcase of creative tech, design, and CS work.</p>
+
+        <!-- ===== Project Grid ===== -->
+    <main class="projects-section container">
+      <!-- Optional: simple categories (toggle badges to filter later if you want) -->
+      <!-- <div class="mb-3 d-flex gap-2 flex-wrap">
+        <span class="badge px-3 py-2">p5.js</span>
+        <span class="badge px-3 py-2">web apps</span>
+        <span class="badge px-3 py-2">posters</span>
+        <span class="badge px-3 py-2">class projects</span>
+      </div> -->
+
+      <!-- Cards grid -->
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+        <!-- p5.js Loading Screens -->
+        <div class="col">
+          <div class="card h-100">
+            <!-- <img class="thumb" src="assets/interface.png"> -->
+            <!-- <img class="thumb" src="url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3')"> -->
+            <div class="card-body">
+              <h5 class="card-title">Experimenting in p5.js</h5>
+              <p class="card-text">A set of playful loading animations exploring timing, easing, and visual rhythm.</p>
+              <div class="d-flex gap-2 small project-meta">
+                <span>p5.js</span> · <span>interaction</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalP5">View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Task Management Web App -->
+        <div class="col">
+          <div class="card h-100">
+            <!-- <img class="thumb" src="assets/roommate_app/household_page.png"> -->
+            <div class="card-body">
+              <h5 class="card-title">Task Management Web App</h5>
+              <p class="card-text">Full-stack app with auth, tasks, and simple analytics. Built with Bootstrap, Handlebars, SQL, Docker.</p>
+              <div class="d-flex gap-2 small project-meta">
+                <span>full-stack</span> · <span>ui/ux</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTaskApp">View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Waterbottle Pitch Poster -->
+        <div class="col">
+          <div class="card h-100">
+            <!-- <img class="thumb" src="assets/waterbottle_pitch.png" alt="Waterbottle poster thumbnail (placeholder)"> -->
+            <div class="card-body">
+              <h5 class="card-title">Waterbottle Pitch Poster</h5>
+              <p class="card-text">A concept poster exploring brand voice, consumer interest, and sensory experience.</p>
+              <div class="d-flex gap-2 small project-meta">
+                <span>poster</span> · <span>visual design</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPoster">View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hangman App (pages gallery) -->
+        <div class="col">
+          <div class="card h-100">
+            <!-- <img class="thumb" src="assets/thumbs/hangman-thumb.jpg" alt="Hangman app thumbnail (placeholder)"> -->
+            <div class="card-body">
+              <h5 class="card-title">Hangman Web App</h5>
+              <p class="card-text">A lightweight web app with test coverage (Mocha/Chai). Screens show game states and UI flows.</p>
+              <div class="d-flex gap-2 small project-meta">
+                <span>frontend</span> · <span>software dev</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalHangman">View</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more projects here as you go… -->
+
+      </div>
+    </main>
+
+    <!-- ===== Modals ===== -->
+
+   <!-- p5.js modal with gif + description -->
+    <div class="modal fade" id="modalP5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">p5.js loading screens</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body text-center">
+            <div class="ratio ratio-16x9 mb-3">
+                <iframe src="https://editor.p5js.org/erpoulas/full/hGUN1UkNG" allowfullscreen></iframe>
+            </div>
+
+            <div class="ratio ratio-16x9 mb-3">
+                <iframe src="https://editor.p5js.org/erpoulas/full/3u50-0Qqo" allowfullscreen></iframe>
+            </div>
+
+            <p class="text-start">
+                A series of animated loading screens built in <strong>p5.js</strong>.  
+                Each explores timing, easing, and playful visual rhythm.  
+                Designed as micro-interactions for web apps.
+            </p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- Task app modal: image carousel of screens -->
+    <div class="modal fade" id="modalTaskApp" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Household Task Management Web App — Screens</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <div id="carouselTaskApp" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselTaskApp" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselTaskApp" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselTaskApp" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselTaskApp" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselTaskApp" data-bs-slide-to="4"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/roommate_app/welcome_page.png" class="d-block w-100" alt="Login page">
+                  <div class="carousel-caption d-none d-md-block"><small>Welcome</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/roommate_app/group_registration.png" class="d-block w-100" alt="Dashboard">
+                  <div class="carousel-caption d-none d-md-block"><small>Group Registration</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/roommate_app/household_page.png" class="d-block w-100" alt="Analytics">
+                  <div class="carousel-caption d-none d-md-block"><small>Household</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/roommate_app/tasks_page.png" class="d-block w-100" alt="Analytics">
+                  <div class="carousel-caption d-none d-md-block"><small>Tasks</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/roommate_app/leaderboard_page.png" class="d-block w-100" alt="Analytics">
+                  <div class="carousel-caption d-none d-md-block"><small>Leaderboard</small></div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselTaskApp" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselTaskApp" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <p class="text-start">
+                github repo: <a href="https://github.com/erpoulas/RoommateApp.git">github.com/erpoulas/RoommateApp.git</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Poster modal: big single image (or PDF embed if you prefer) -->
+    <div class="modal fade" id="modalPoster" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Waterbottle Pitch Poster</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body text-center">
+            <!-- <img src="assets/waterbottle_pitch.png" class="img-fluid rounded" alt="Waterbottle poster"> -->
+            <img src="assets/waterbottle_pitch.png"
+            class="img-fluid rounded"
+            alt="Waterbottle poster"
+            style="max-width: 70%; height: auto;">
+            
+            <!-- For PDF: <div class="ratio ratio-16x9"><iframe src="assets/posters/waterbottle-poster.pdf" title="Poster PDF"></iframe></div> -->
+            <p class="text-start">
+              Designed as part of a three person collaboration of a mock business proposal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hangman modal: image carousel -->
+    <div class="modal fade" id="modalHangman" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Hangman Web App — Screens</h5>
+            <button class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div id="carouselHangman" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="4"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="assets/hangman_game/incorrect_guess.png" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block"><small>Incorrect Guess screen</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/hangman_game/hint.png" class="d-block w-100">
+                  <div class="carousel-caption d-none d-md-block"><small>Hint Popup</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/hangman_game/dark_mode.png" class="d-block w-100" alt="End state">
+                  <div class="carousel-caption d-none d-md-block"><small>Dark mode theme</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/hangman_game/leaderboard.png" class="d-block w-100" alt="End state">
+                  <div class="carousel-caption d-none d-md-block"><small>Leaderboard screen</small></div>
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/hangman_game/dictionary_word_search.png" class="d-block w-100" alt="End state">
+                  <div class="carousel-caption d-none d-md-block"><small>Dictionary word search</small></div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselHangman" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselHangman" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <p class="text-start">
+                github repo: <a href="https://github.com/erpoulas/CU-CSCI3308-Fall2024-Ultimate-Hangman">github.com/erpoulas/CU-CSCI3308-Fall2024-Ultimate-Hangman.git</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card" id="footer">
+      <!-- <div class="card-header">
+        <a href="resume.html">Check out my resume!</a>
+      </div> -->
+      <div class="card-body">
+        <a href="https://github.com/erpoulas" class="btn btn-primary">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/erasmia-poulassichidis-460b6a293" class="btn btn-primary">
+          <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
