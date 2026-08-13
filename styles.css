@@ -120,7 +120,8 @@ a {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.project-card .btn {
+/* ===== Brand buttons (project-card "View" buttons + footer social icons) ===== */
+.btn-primary {
   background-color: var(--brand-blue);
   border: none;
   font-family: 'Seriously Nostalgic Italic', sans-serif;
@@ -130,7 +131,7 @@ a {
   transition: transform 0.2s, background-color 0.2s;
 }
 
-.project-card .btn:hover {
+.btn-primary:hover {
   background-color: var(--brand-blue-dark);
   transform: scale(1.05);
 }
