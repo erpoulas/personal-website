@@ -11,14 +11,17 @@
 @font-face {
   font-family: 'Seriously Nostalgic';
   src: url('https://static.showit.co/file/i3a2i1-7QZOw4SFsF9MUDQ/146247/seriouslynostalgic-extracond.woff');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Lunchtype Light';
   src: url('https://static.showit.co/file/wPWMQl-gT--DMXo93qNi0Q/146247/lunchtype22-light-webfont.woff');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Seriously Nostalgic Italic';
   src: url('https://static.showit.co/file/_-NUGub4Sr2rpns-MaDx8Q/146247/seriouslynostalgicfnit-ucn.woff');
+  font-display: swap;
 }
 
 /* ===== Base layout ===== */
