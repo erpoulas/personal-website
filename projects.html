@@ -22,6 +22,22 @@ title: Projects by Erasmia
     <div class="container my-4">
       <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
 
+        <!-- Blender Animations -->
+        <div class="col">
+          <div class="card project-card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Blender Animations</h5>
+              <p class="card-text">3D animations created in Blender, exploring motion, lighting, and modeling.</p>
+              <div class="d-flex gap-2 small project-meta">
+                <span>Blender</span> · <span>3D animation</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlender">View</button>
+            </div>
+          </div>
+        </div>
+
         <!-- p5.js Loading Screens -->
         <div class="col">
           <div class="card project-card h-100">
@@ -70,21 +86,6 @@ title: Projects by Erasmia
           </div>
         </div>
 
-        <!-- Hangman App (pages gallery) -->
-        <div class="col">
-          <div class="card project-card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Hangman Web App</h5>
-              <p class="card-text">A lightweight web app with test coverage (Mocha/Chai). Screens show game states and UI flows.</p>
-              <div class="d-flex gap-2 small project-meta">
-                <span>frontend</span> · <span>software dev</span>
-              </div>
-            </div>
-            <div class="card-footer bg-transparent border-0 d-flex justify-content-end">
-              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalHangman">View</button>
-            </div>
-          </div>
-        </div>
         <!-- Add more projects here as you go… -->
       </div>
     </div>
@@ -197,56 +198,21 @@ title: Projects by Erasmia
       </div>
     </div>
 
-    <!-- Hangman modal: image carousel -->
-    <div class="modal fade" id="modalHangman" tabindex="-1" aria-hidden="true">
+    <!-- Blender modal: video embed(s) -->
+    <div class="modal fade" id="modalBlender" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Hangman Web App — Screens</h5>
+            <h5 class="modal-title">Blender Animations</h5>
             <button class="btn-close" data-bs-dismiss="modal"></button>
           </div>
-          <div class="modal-body">
-            <div id="carouselHangman" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="2"></button>
-                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="3"></button>
-                <button type="button" data-bs-target="#carouselHangman" data-bs-slide-to="4"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets/hangman_game/incorrect_guess.png" class="d-block w-100">
-                  <div class="carousel-caption d-none d-md-block"><small>Incorrect Guess screen</small></div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/hangman_game/hint.png" class="d-block w-100">
-                  <div class="carousel-caption d-none d-md-block"><small>Hint Popup</small></div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/hangman_game/dark_mode.png" class="d-block w-100" alt="End state">
-                  <div class="carousel-caption d-none d-md-block"><small>Dark mode theme</small></div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/hangman_game/leaderboard.png" class="d-block w-100" alt="End state">
-                  <div class="carousel-caption d-none d-md-block"><small>Leaderboard screen</small></div>
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/hangman_game/dictionary_word_search.png" class="d-block w-100" alt="End state">
-                  <div class="carousel-caption d-none d-md-block"><small>Dictionary word search</small></div>
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselHangman" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselHangman" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+          <div class="modal-body text-center">
+            <div class="ratio ratio-16x9 mb-3">
+              <iframe src="https://drive.google.com/file/d/15JLnyxX8ePg_J4lSEPhiMBjDwnc23SgE/preview" allow="autoplay" allowfullscreen></iframe>
             </div>
+
             <p class="text-start">
-                github repo: <a href="https://github.com/erpoulas/CU-CSCI3308-Fall2024-Ultimate-Hangman">github.com/erpoulas/CU-CSCI3308-Fall2024-Ultimate-Hangman.git</a>
+              3D animations created in Blender last semester, exploring motion, lighting, and modeling.
             </p>
           </div>
         </div>
