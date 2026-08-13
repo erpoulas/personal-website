@@ -1,0 +1,198 @@
+/* ===== Design tokens ===== */
+:root {
+  --brand-blue: #001ecb;
+  --brand-blue-rgb: 0, 30, 203;
+  --brand-blue-dark: darkblue;
+  --bg-cream: #f4f1ea;
+  --site-bg-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  --footer-height: 80px; /* kept in sync at runtime by script.js */
+}
+
+@font-face {
+  font-family: 'Seriously Nostalgic';
+  src: url('https://static.showit.co/file/i3a2i1-7QZOw4SFsF9MUDQ/146247/seriouslynostalgic-extracond.woff');
+}
+@font-face {
+  font-family: 'Lunchtype Light';
+  src: url('https://static.showit.co/file/wPWMQl-gT--DMXo93qNi0Q/146247/lunchtype22-light-webfont.woff');
+}
+@font-face {
+  font-family: 'Seriously Nostalgic Italic';
+  src: url('https://static.showit.co/file/_-NUGub4Sr2rpns-MaDx8Q/146247/seriouslynostalgicfnit-ucn.woff');
+}
+
+/* ===== Base layout ===== */
+html, body {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-cream);
+}
+
+main {
+  padding-bottom: calc(var(--footer-height) * 2);
+}
+
+/* ===== Typography ===== */
+h1 {
+  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-size: clamp(50px, 5vw, 60px);
+  color: var(--brand-blue);
+  letter-spacing: 0.025em;
+  margin: 1.5rem 1.5vw 1rem;
+}
+
+p {
+  font-family: 'Lunchtype Light', serif;
+  font-size: 1.2rem;
+  color: var(--brand-blue);
+  letter-spacing: 0.025em;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+}
+
+a {
+  font-family: 'Lunchtype Light', serif;
+  color: var(--brand-blue);
+  letter-spacing: 0.025em;
+}
+
+/* Large display paragraph used for the homepage hero line only */
+.hero-text {
+  font-family: 'Seriously Nostalgic', sans-serif;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  font-size: clamp(30px, 2vw, 50px);
+  color: var(--brand-blue);
+  background-image: var(--site-bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  filter: invert(100%);
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Seriously Nostalgic', sans-serif;
+  color: var(--brand-blue);
+  letter-spacing: 0.025em;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  color: var(--brand-blue-dark);
+}
+
+/* ===== Profile photo (homepage) ===== */
+.profile-pic {
+  width: clamp(180px, 20vw, 250px);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-pic img {
+  width: 107%;
+  height: 107%;
+  object-fit: cover;
+  object-position: 70% 30%;
+}
+
+/* ===== Project cards ===== */
+.project-card {
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card .btn {
+  background-color: var(--brand-blue);
+  border: none;
+  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  letter-spacing: 0.05em;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.project-card .btn:hover {
+  background-color: var(--brand-blue-dark);
+  transform: scale(1.05);
+}
+
+.card-title {
+  font-family: 'Lunchtype Light', serif;
+  color: var(--brand-blue);
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  margin: 0;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-text {
+  font-family: 'Lunchtype Light', serif;
+}
+
+/* ===== Modal carousels ===== */
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(var(--brand-blue-rgb), 0.75);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* ===== Poster image (modal) ===== */
+.poster-img {
+  max-width: 70%;
+  height: auto;
+}
+
+/* ===== Site footer ===== */
+.site-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  font-family: 'Lunchtype Light', serif;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  color: var(--brand-blue);
+  letter-spacing: 0.025em;
+  text-align: center;
+
+  padding: 15px;
+  background-image: var(--site-bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
