@@ -137,9 +137,9 @@ a {
 }
 
 .card-title {
-  font-family: 'Archivo', sans-serif;
+  font-family: 'Seriously Nostalgic Italic', sans-serif;
   color: var(--brand-blue);
-  font-weight: bold;
+  /* font-weight: bold; */
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
