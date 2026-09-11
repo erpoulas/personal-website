@@ -38,6 +38,7 @@ main {
 /* ===== Typography ===== */
 h1 {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-weight: 400;
   font-size: clamp(50px, 5vw, 60px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
@@ -64,6 +65,7 @@ a {
 /* Large display paragraph used for the homepage hero line only */
 .hero-text {
   font-family: 'Seriously Nostalgic', sans-serif;
+  font-weight: 400;
   font-size: clamp(28px, 4vw, 38px);
 }
 
@@ -87,6 +89,7 @@ a {
 
 .navbar-nav .nav-link {
   font-family: 'Seriously Nostalgic', sans-serif;
+  font-weight: 400;
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   transition: color 0.3s ease-in-out;
@@ -125,6 +128,8 @@ a {
   background-color: var(--brand-blue);
   border: none;
   font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
   letter-spacing: 0.025em;
   border-radius: 2rem;
   padding: 0.5rem 1.5rem;
@@ -138,6 +143,8 @@ a {
 
 .card-title {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   display: block;
