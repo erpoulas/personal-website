@@ -20,7 +20,7 @@ document.querySelectorAll('.modal').forEach((modal) => {
   iframes.forEach((iframe) => sources.set(iframe, iframe.src));
 
   modal.addEventListener('hidden.bs.modal', () => {
-    iframes.forEach((iframe) => { iframe.src = ''; });
+    iframes.forEach((iframe) => { iframe.src = 'about:blank'; });
   });
 
   modal.addEventListener('show.bs.modal', () => {
