@@ -125,7 +125,7 @@ a {
   background-color: var(--brand-blue);
   border: none;
   font-family: 'Seriously Nostalgic Italic', sans-serif;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   border-radius: 2rem;
   padding: 0.5rem 1.5rem;
   transition: transform 0.2s, background-color 0.2s;
@@ -139,17 +139,12 @@ a {
 .card-title {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
   color: var(--brand-blue);
-  /* font-weight: bold; */
+  letter-spacing: 0.025em;
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
   margin: 0;
   border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.card-text {
-  font-family: 'Archivo', sans-serif;
-  font-weight: 300;
 }
 
 /* ===== Modal carousels ===== */
