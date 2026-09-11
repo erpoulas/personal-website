@@ -9,3 +9,21 @@ function setFooterVar() {
 
 window.addEventListener('load', setFooterVar);
 window.addEventListener('resize', setFooterVar);
+
+// Stops embedded videos (e.g. Google Drive/p5.js iframes) from continuing
+// to play in the background after their modal is closed.
+document.querySelectorAll('.modal').forEach((modal) => {
+  const iframes = modal.querySelectorAll('iframe');
+  if (!iframes.length) return;
+
+  const sources = new Map();
+  iframes.forEach((iframe) => sources.set(iframe, iframe.src));
+
+  modal.addEventListener('hidden.bs.modal', () => {
+    iframes.forEach((iframe) => { iframe.src = ''; });
+  });
+
+  modal.addEventListener('show.bs.modal', () => {
+    iframes.forEach((iframe) => { iframe.src = sources.get(iframe); });
+  });
+});
