@@ -104,11 +104,11 @@ title: Projects by Erasmia
         </div>
         <div class="modal-body text-center">
             <div class="ratio ratio-16x9 mb-3">
-                <iframe src="https://editor.p5js.org/erpoulas/full/hGUN1UkNG" allowfullscreen></iframe>
+                <iframe data-src="https://editor.p5js.org/erpoulas/full/hGUN1UkNG" allowfullscreen></iframe>
             </div>
 
             <div class="ratio ratio-16x9 mb-3">
-                <iframe src="https://editor.p5js.org/erpoulas/full/3u50-0Qqo" allowfullscreen></iframe>
+                <iframe data-src="https://editor.p5js.org/erpoulas/full/3u50-0Qqo" allowfullscreen></iframe>
             </div>
 
             <p class="text-start">
@@ -205,7 +205,7 @@ title: Projects by Erasmia
     </div>
 
     <!-- Blender modal: video embed(s) -->
-    <div class="modal fade modal-video" id="modalBlender" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalBlender" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -231,7 +231,7 @@ title: Projects by Erasmia
     </div>
 
     <!-- Skiing Penguin modal: video embed -->
-    <div class="modal fade modal-video" id="modalSkiingPenguin" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalSkiingPenguin" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -257,19 +257,5 @@ title: Projects by Erasmia
 
     <!-- Footer -->
     {% include footer.html %}
-
-    <!-- Only load/play video iframes once their modal is opened, and stop them on close -->
-    <script>
-      document.querySelectorAll('.modal-video').forEach(function (modal) {
-        var iframe = modal.querySelector('iframe[data-src]');
-        if (!iframe) return;
-        modal.addEventListener('show.bs.modal', function () {
-          iframe.src = iframe.getAttribute('data-src');
-        });
-        modal.addEventListener('hidden.bs.modal', function () {
-          iframe.src = '';
-        });
-      });
-    </script>
   </body>
 </html>

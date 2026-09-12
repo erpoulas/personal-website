@@ -6,6 +6,9 @@
   --bg-cream: #f4f1ea;
   --site-bg-image: url('https://images.unsplash.com/photo-1615716272018-7c5b1216e262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
   --footer-height: 80px; /* kept in sync at runtime by script.js */
+  --font-display: 'Seriously Nostalgic', sans-serif;
+  --font-display-italic: 'Seriously Nostalgic Italic', sans-serif;
+  --font-body: 'Archivo', sans-serif;
 }
 
 @font-face {
@@ -36,6 +39,11 @@ main {
 }
 
 /* ===== Typography ===== */
+h1, p, a, .navbar-nav .nav-link, .card-title, .modal-title, .site-footer {
+  color: var(--brand-blue);
+  letter-spacing: 0.025em;
+}
+
 /* h1 and .card-title/.modal-title share the same ~1.47x min-to-max
    ratio (the "my projects" vs. card-title proportion that looked
    right on phone widths), so that ratio holds at every viewport
@@ -44,46 +52,43 @@ main {
    the ratio still holds exactly at that ceiling too. Other elements
    below just use their own independent fluid clamp(). */
 h1 {
-  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-family: var(--font-display-italic);
   font-weight: 400;
   font-size: clamp(50px, 2.875rem + 1vw, 60px);
-  color: var(--brand-blue);
-  letter-spacing: 0.025em;
   margin: 1.5rem 1.5vw 1rem;
 }
 
 p {
-  font-family: 'Archivo', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 1.2rem;
-  color: var(--brand-blue);
-  letter-spacing: 0.025em;
   margin-left: 1.5vw;
   margin-right: 1.5vw;
 }
 
 a {
-  font-family: 'Archivo', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
-  color: var(--brand-blue);
-  letter-spacing: 0.025em;
 }
 
 /* Large display paragraph used for the homepage hero line only */
 .hero-text {
-  font-family: 'Seriously Nostalgic', sans-serif;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(28px, 1.5rem + 1vw, 38px);
 }
 
 /* ===== Navbar ===== */
-.navbar {
-  font-size: 30px;
-  color: var(--brand-blue);
+.navbar, .site-footer {
   background-image: var(--site-bg-image);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.navbar {
+  font-size: 30px;
+  color: var(--brand-blue);
 }
 
 .navbar-toggler {
@@ -95,15 +100,13 @@ a {
 }
 
 .navbar-nav .nav-link {
-  font-family: 'Seriously Nostalgic', sans-serif;
+  font-family: var(--font-display);
   font-weight: 400;
-  color: var(--brand-blue);
-  letter-spacing: 0.025em;
   transition: color 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link:hover {
-  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-family: var(--font-display-italic);
   color: var(--brand-blue-dark);
 }
 
@@ -134,7 +137,7 @@ a {
 .btn-primary {
   background-color: var(--brand-blue);
   border: none;
-  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-family: var(--font-display-italic);
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0.025em;
@@ -149,11 +152,9 @@ a {
 }
 
 .card-title {
-  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-family: var(--font-display-italic);
   font-weight: 400;
   font-size: clamp(34px, 1.955rem + 0.68vw, 40.8px);
-  color: var(--brand-blue);
-  letter-spacing: 0.025em;
   display: block;
   width: 100%;
   padding: 0.5rem 1rem;
@@ -163,11 +164,9 @@ a {
 
 /* ===== Modal titles ===== */
 .modal-title {
-  font-family: 'Seriously Nostalgic Italic', sans-serif;
+  font-family: var(--font-display-italic);
   font-weight: 400;
   font-size: clamp(34px, 1.955rem + 0.68vw, 40.8px);
-  color: var(--brand-blue);
-  letter-spacing: 0.025em;
 }
 
 /* ===== Modal carousels ===== */
@@ -209,16 +208,10 @@ a {
   width: 100%;
   z-index: 1000;
 
-  font-family: 'Archivo', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: clamp(14px, 0.775rem + 0.4vw, 18px);
-  color: var(--brand-blue);
-  letter-spacing: 0.025em;
   text-align: center;
 
   padding: 15px;
-  background-image: var(--site-bg-image);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }

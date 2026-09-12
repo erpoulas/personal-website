@@ -10,21 +10,18 @@ function setFooterVar() {
 window.addEventListener('load', setFooterVar);
 window.addEventListener('resize', setFooterVar);
 
-// Stops embedded videos (e.g. p5.js iframes) from continuing to play in
-// the background after their modal is closed. .modal-video modals handle
-// their own iframe lazily via data-src, so they're excluded here.
-document.querySelectorAll('.modal:not(.modal-video)').forEach((modal) => {
-  const iframes = modal.querySelectorAll('iframe');
+// Lazily loads modal iframes (video embeds, p5.js sketches) only while
+// their modal is open, so nothing loads on page load and nothing keeps
+// playing in the background after the modal is closed.
+document.querySelectorAll('.modal').forEach((modal) => {
+  const iframes = modal.querySelectorAll('iframe[data-src]');
   if (!iframes.length) return;
 
-  const sources = new Map();
-  iframes.forEach((iframe) => sources.set(iframe, iframe.src));
-
-  modal.addEventListener('hidden.bs.modal', () => {
-    iframes.forEach((iframe) => { iframe.src = 'about:blank'; });
+  modal.addEventListener('show.bs.modal', () => {
+    iframes.forEach((iframe) => { iframe.src = iframe.dataset.src; });
   });
 
-  modal.addEventListener('show.bs.modal', () => {
-    iframes.forEach((iframe) => { iframe.src = sources.get(iframe); });
+  modal.addEventListener('hidden.bs.modal', () => {
+    iframes.forEach((iframe) => { iframe.src = ''; });
   });
 });
