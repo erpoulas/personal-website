@@ -10,9 +10,10 @@ function setFooterVar() {
 window.addEventListener('load', setFooterVar);
 window.addEventListener('resize', setFooterVar);
 
-// Stops embedded videos (e.g. Google Drive/p5.js iframes) from continuing
-// to play in the background after their modal is closed.
-document.querySelectorAll('.modal').forEach((modal) => {
+// Stops embedded videos (e.g. p5.js iframes) from continuing to play in
+// the background after their modal is closed. .modal-video modals handle
+// their own iframe lazily via data-src, so they're excluded here.
+document.querySelectorAll('.modal:not(.modal-video)').forEach((modal) => {
   const iframes = modal.querySelectorAll('iframe');
   if (!iframes.length) return;
 
