@@ -107,6 +107,21 @@ a {
   color: var(--brand-blue-dark);
 }
 
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(var(--brand-blue-rgb), 0.15);
+    backdrop-filter: blur(6px);
+  }
+
+  .navbar-nav .nav-item {
+    border-bottom: 1px solid var(--brand-blue);
+  }
+
+  .navbar-nav .nav-item:last-child {
+    border-bottom: none;
+  }
+}
+
 /* ===== Profile photo (homepage) ===== */
 .profile-pic {
   width: clamp(180px, 20vw, 250px);

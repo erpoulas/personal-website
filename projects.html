@@ -205,7 +205,7 @@ title: Projects by Erasmia
     </div>
 
     <!-- Blender modal: video embed(s) -->
-    <div class="modal fade" id="modalBlender" tabindex="-1" aria-hidden="true">
+    <div class="modal fade modal-video" id="modalBlender" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -214,7 +214,7 @@ title: Projects by Erasmia
           </div>
           <div class="modal-body text-center">
             <div class="ratio ratio-16x9 mb-3">
-              <iframe src="https://drive.google.com/file/d/15JLnyxX8ePg_J4lSEPhiMBjDwnc23SgE/preview?autoplay=1" allow="autoplay" allowfullscreen></iframe>
+              <iframe data-src="https://drive.google.com/file/d/15JLnyxX8ePg_J4lSEPhiMBjDwnc23SgE/preview?autoplay=1" allow="autoplay" allowfullscreen></iframe>
             </div>
 
             <p class="text-start">
@@ -228,7 +228,7 @@ title: Projects by Erasmia
     </div>
 
     <!-- Skiing Penguin modal: video embed -->
-    <div class="modal fade" id="modalSkiingPenguin" tabindex="-1" aria-hidden="true">
+    <div class="modal fade modal-video" id="modalSkiingPenguin" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -237,7 +237,7 @@ title: Projects by Erasmia
           </div>
           <div class="modal-body text-center">
             <div class="ratio ratio-16x9 mb-3">
-              <iframe src="https://drive.google.com/file/d/1nKTITRUk7eJh4GXMNjavOk2cgBFQU-OB/preview?autoplay=1" allow="autoplay" allowfullscreen></iframe>
+              <iframe data-src="https://drive.google.com/file/d/1nKTITRUk7eJh4GXMNjavOk2cgBFQU-OB/preview?autoplay=1" allow="autoplay" allowfullscreen></iframe>
             </div>
 
             <p class="text-start">
@@ -251,5 +251,19 @@ title: Projects by Erasmia
 
     <!-- Footer -->
     {% include footer.html %}
+
+    <!-- Only load/play video iframes once their modal is opened, and stop them on close -->
+    <script>
+      document.querySelectorAll('.modal-video').forEach(function (modal) {
+        var iframe = modal.querySelector('iframe[data-src]');
+        if (!iframe) return;
+        modal.addEventListener('show.bs.modal', function () {
+          iframe.src = iframe.getAttribute('data-src');
+        });
+        modal.addEventListener('hidden.bs.modal', function () {
+          iframe.src = '';
+        });
+      });
+    </script>
   </body>
 </html>
