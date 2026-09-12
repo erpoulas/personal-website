@@ -144,7 +144,7 @@ a {
 .card-title {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: clamp(28px, 4vw, 38px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   display: block;
