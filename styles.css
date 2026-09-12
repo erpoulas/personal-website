@@ -36,15 +36,18 @@ main {
 }
 
 /* ===== Typography ===== */
-/* h1 and .card-title/.modal-title deliberately share the same
-   ~1.47x min-to-max growth ratio (the proportion between "my projects"
-   and the card titles that looked right on phone widths, where both
-   sit at their floor) so that relationship holds at every viewport
-   width. Other elements below just use their own fluid clamp(). */
+/* h1 and .card-title/.modal-title share the same ~1.47x floor ratio
+   (the "my projects" vs. card-title proportion that looked right on
+   phone widths, where both sit at their min) so mobile stays matched.
+   h1's max is capped at its original 60px desktop size rather than
+   scaling up to keep that same ratio at wide viewports too -- above
+   ~800px wide it grows faster than the cards and then flattens out
+   at 60px, same ceiling as before these ratio changes. Other elements
+   below just use their own independent fluid clamp(). */
 h1 {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
   font-weight: 400;
-  font-size: clamp(50px, 2.54rem + 2.35vw, 73.53px);
+  font-size: clamp(50px, 2.875rem + 1vw, 60px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   margin: 1.5rem 1.5vw 1rem;
