@@ -87,7 +87,7 @@ a {
 }
 
 .navbar-toggler {
-  border-color: white;
+  border-color: var(--brand-blue);
 }
 
 .navbar-toggler-icon {
