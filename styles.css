@@ -36,14 +36,11 @@ main {
 }
 
 /* ===== Typography ===== */
-/* Fluid sizes below share one growth window (400px viewport -> min,
-   1400px viewport -> max) AND the same ~1.47x min-to-max growth ratio
-   (the h1-to-card-title proportion that looked right on phone widths,
-   where every element sits at its floor). Sharing the ratio keeps
-   everything's relative size constant at every viewport width -- h1
-   stays proportionally bigger than the navbar, which stays bigger
-   than card/modal titles, which stay bigger than the footer, with no
-   drift as you resize. */
+/* h1 and .card-title/.modal-title deliberately share the same
+   ~1.47x min-to-max growth ratio (the proportion between "my projects"
+   and the card titles that looked right on phone widths, where both
+   sit at their floor) so that relationship holds at every viewport
+   width. Other elements below just use their own fluid clamp(). */
 h1 {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
   font-weight: 400;
@@ -74,12 +71,12 @@ a {
 .hero-text {
   font-family: 'Seriously Nostalgic', sans-serif;
   font-weight: 400;
-  font-size: clamp(28px, 1.42rem + 1.32vw, 41.18px);
+  font-size: clamp(28px, 1.5rem + 1vw, 38px);
 }
 
 /* ===== Navbar ===== */
 .navbar {
-  font-size: clamp(30px, 1.52rem + 1.41vw, 44.12px);
+  font-size: clamp(30px, 1.375rem + 2vw, 50px);
   color: var(--brand-blue);
   background-image: var(--site-bg-image);
   background-size: cover;
@@ -212,7 +209,7 @@ a {
 
   font-family: 'Archivo', sans-serif;
   font-weight: 300;
-  font-size: clamp(14px, 0.71rem + 0.66vw, 20.59px);
+  font-size: clamp(14px, 0.775rem + 0.4vw, 18px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   text-align: center;
