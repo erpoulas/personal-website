@@ -37,15 +37,17 @@ main {
 
 /* ===== Typography ===== */
 /* Fluid sizes below share one growth window (400px viewport -> min,
-   1400px viewport -> max) AND the same ~1.3x min-to-max growth ratio.
-   Sharing the ratio (not just the window) is what keeps their relative
-   sizes constant at every viewport width -- h1 stays proportionally
-   bigger than the navbar, which stays bigger than card/modal titles,
-   which stay bigger than the footer, with no drift as you resize. */
+   1400px viewport -> max) AND the same ~1.47x min-to-max growth ratio
+   (the h1-to-card-title proportion that looked right on phone widths,
+   where every element sits at its floor). Sharing the ratio keeps
+   everything's relative size constant at every viewport width -- h1
+   stays proportionally bigger than the navbar, which stays bigger
+   than card/modal titles, which stay bigger than the footer, with no
+   drift as you resize. */
 h1 {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
   font-weight: 400;
-  font-size: clamp(46px, 2.525rem + 1.4vw, 60px);
+  font-size: clamp(50px, 2.54rem + 2.35vw, 73.53px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   margin: 1.5rem 1.5vw 1rem;
@@ -72,12 +74,12 @@ a {
 .hero-text {
   font-family: 'Seriously Nostalgic', sans-serif;
   font-weight: 400;
-  font-size: clamp(29px, 1.5875rem + 0.9vw, 38px);
+  font-size: clamp(28px, 1.42rem + 1.32vw, 41.18px);
 }
 
 /* ===== Navbar ===== */
 .navbar {
-  font-size: clamp(38px, 2.075rem + 1.2vw, 50px);
+  font-size: clamp(30px, 1.52rem + 1.41vw, 44.12px);
   color: var(--brand-blue);
   background-image: var(--site-bg-image);
   background-size: cover;
@@ -150,7 +152,7 @@ a {
 .card-title {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
   font-weight: 400;
-  font-size: clamp(35px, 1.9125rem + 1.1vw, 46px);
+  font-size: clamp(34px, 1.725rem + 1.6vw, 50px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   display: block;
@@ -164,7 +166,7 @@ a {
 .modal-title {
   font-family: 'Seriously Nostalgic Italic', sans-serif;
   font-weight: 400;
-  font-size: clamp(35px, 1.9125rem + 1.1vw, 46px);
+  font-size: clamp(34px, 1.725rem + 1.6vw, 50px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
 }
@@ -210,7 +212,7 @@ a {
 
   font-family: 'Archivo', sans-serif;
   font-weight: 300;
-  font-size: clamp(14px, 0.77rem + 0.42vw, 18.2px);
+  font-size: clamp(14px, 0.71rem + 0.66vw, 20.59px);
   color: var(--brand-blue);
   letter-spacing: 0.025em;
   text-align: center;
