@@ -196,6 +196,15 @@ a {
   border-radius: 0 0 5px 5px;
 }
 
+.carousel-indicators {
+  position: static;
+  margin: 0.75rem 0 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--brand-blue);
+}
+
 /* ===== Poster image (modal) ===== */
 .poster-img {
   max-width: 70%;
