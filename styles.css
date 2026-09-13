@@ -175,10 +175,6 @@ a {
 }
 
 /* ===== Modal carousels ===== */
-.carousel-item {
-  background-color: var(--bg-cream);
-}
-
 .carousel-item img {
   width: 100%;
   height: 500px;
